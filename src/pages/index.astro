@@ -1,11 +1,53 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import LisaSimpsone from '../images/LisaSimpson.png';
+// Importa el componente AddToCartButton
+import AddToCartButton from '../components/AddToCartButton.astro'; 
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Affiche de Lisa Simpson</title>
+    <img src="/LisaSimpson.png" alt="LisaSimpson" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+      color: #333;
+    }
+    h1 {
+      color: #000;
+      margin-bottom: 10px;
+    }
+    p {
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .rating {
+      color: #FFD700; /* Color dorado para las estrellas */
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+    
+  <img src="/LisaSimpson.png" alt="LisaSimpson" />
+  
+  <h1>Afiche de Lisa Simpson 😎❤</h1>
+  
+  <p>Un lindo afiche de Lisa Simpson para decorar cualquier parte en tu hogar.</p>
+  
+  <div class="rating">
+    ★★★★★ 
+  </div>
+
+  <AddToCartButton />
+  
+</body>
+</html>

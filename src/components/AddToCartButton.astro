@@ -1,0 +1,64 @@
+---
+// src/components/AddToCartButton.astro
+const price = 5.00;
+const currencySymbol = '$';
+const buttonText = 'Add To Cart';
+---
+
+<div class="product-widget">
+  <div class="price-container">
+    <span class="currency-symbol">{currencySymbol}</span>
+    <span class="price-value">{price.toFixed(2)}</span>
+    <span class="price-separator">/-</span>
+  </div>
+  <button class="add-to-cart-btn">
+    {buttonText}
+  </button>
+</div>
+
+<style>
+  .product-widget {
+    background-color: #0d0d0d; 
+    padding: 20px;
+    display: inline-block;
+    border-radius: 8px;
+    font-family: sans-serif; 
+  }
+  .price-container {
+    font-size: 2.5rem; 
+    margin-bottom: 15px; 
+    color: white; 
+    display: flex;
+    align-items: baseline;
+  }
+  .currency-symbol {
+    color: #4CAF50; 
+    font-weight: bold;
+    margin-right: 2px;
+  }
+  .price-value {
+    font-weight: bold;
+    color: white; 
+  }
+  .price-separator {
+    color: #cccccc; 
+    font-size: 0.8em; 
+    font-weight: normal;
+  }
+  .add-to-cart-btn {
+    background-color: #9C27B0; 
+    color: white; 
+    padding: 15px 40px; 
+    border: none;
+    border-radius: 30px; 
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: capitalize; 
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  .add-to-cart-btn:hover {
+    background-color: #7B1FA2; 
+  }
+</style>
